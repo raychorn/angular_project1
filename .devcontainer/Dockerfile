@@ -17,9 +17,9 @@ RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.s
     source ~/.bashrc && \
     nvm install v9.3.0 && \
     node -v && \
-    npm version && \
+    npm version
 
-RUN apt install build-essential -y --fix-missing
+RUN apt install build-essential -y --fix-missing && \
     yes | npm install -g @angular/cli && \
     ng version && \
     apt-get upgrade git -y --fix-missing && \
