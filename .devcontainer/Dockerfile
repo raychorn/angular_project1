@@ -16,7 +16,6 @@ RUN apt-get install -y nodejs --fix-missing
 RUN node -v
 RUN npm version
 RUN apt install build-essential -y --fix-missing
-#RUN apt-get install yes -y --fix-missing
 RUN yes | npm install -g @angular/cli
 RUN ng version
 RUN apt-get upgrade git -y --fix-missing
