@@ -21,7 +21,10 @@ RUN apt-get update -y && \
     apt-get upgrade git -y --fix-missing && \
     git --version && \
     git config --global user.email "raychorn@gmail.com" && \
-    git config --global user.name "Ray C Horn"  
+    git config --global user.name "Ray C Horn"  && \
+    apt install default-jre -y --fix-missing && \
+    apt install openjdk-11-jre-headless -y --fix-missing && \
+    apt install openjdk-8-jre-headless -y --fix-missing 
 
 RUN npm install -g firebase-tools
 
