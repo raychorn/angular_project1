@@ -11,10 +11,12 @@ LABEL promoted="true"
 
 RUN apt-get update -y && \
     apt-get install curl -y --fix-missing && \
-    apt-get install build-essential libssl-dev -y --fix-missing && \
-    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash && \
-    nvm install v9.3.0 && \
-    node -v && \
+    apt-get install build-essential libssl-dev -y --fix-missing
+
+RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash && \
+    nvm install v9.3.0
+
+RUN node -v && \
     npm version && \
     apt install build-essential -y --fix-missing && \
     yes | npm install -g @angular/cli && \
