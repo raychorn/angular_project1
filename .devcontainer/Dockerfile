@@ -23,4 +23,5 @@ RUN apt-get update -y && \
     git config --global user.email "raychorn@gmail.com" && \
     git config --global user.name "Ray C Horn"  
 
-EXPOSE 8088/tcp
+RUN npm install -g firebase-tools
+

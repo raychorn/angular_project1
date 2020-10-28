@@ -14,7 +14,15 @@
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [],
 	"appPort": [
-		5000
+		5000,
+		9005,
+		9099,
+		5001,
+		8080,
+		9000,
+		5000,
+		8085,
+		9090
 	]
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
