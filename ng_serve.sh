@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
+
 echo "Running..."
-cd /home/raychorn/projects/angular7/project1
-ng serve --host 10.0.0.84 --port 8088
+ng serve --host 0.0.0.0 --port 8088
