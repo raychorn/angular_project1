@@ -13,7 +13,7 @@ RUN apt-get update -y
 RUN apt-get install curl -y --fix-missing
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get install -y nodejs --fix-missing
-RUN nodejs -v
+RUN node -v
 RUN npm version
 RUN apt install build-essential -y --fix-missing
 RUN apt-get install yes -y --fix-missing
