@@ -14,11 +14,12 @@ RUN apt-get update -y && \
     apt-get install build-essential libssl-dev -y --fix-missing
 
 RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash && \
-    nvm install v9.3.0
-
-RUN node -v && \
+    source ~/.bashrc && \
+    nvm install v9.3.0 && \
+    node -v && \
     npm version && \
-    apt install build-essential -y --fix-missing && \
+
+RUN apt install build-essential -y --fix-missing
     yes | npm install -g @angular/cli && \
     ng version && \
     apt-get upgrade git -y --fix-missing && \
