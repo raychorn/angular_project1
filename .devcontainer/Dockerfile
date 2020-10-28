@@ -27,6 +27,8 @@ RUN apt-get update && apt-get install -y -q --no-install-recommends \
     wget \
     && rm -rf /var/lib/apt/lists/*
 
+RUN mkdir /usr/local/nvm
+
 ENV NVM_DIR /usr/local/nvm 
 ENV NODE_VERSION 9.3.0
 
