@@ -27,13 +27,13 @@ RUN apt-get update && apt-get install -y -q --no-install-recommends \
     wget \
     && rm -rf /var/lib/apt/lists/*
 
-RUN mkdir /usr/local/nvm
-
-ENV NVM_DIR /usr/local/nvm 
+ENV NVM_DIR /root/.nvm
 ENV NODE_VERSION 9.3.0
 
 RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.20.0/install.sh | bash \
-    && . $NVM_DIR/nvm.sh \
+    && . /root/.bashrc \
+    && mkdir -p $NVM_DIR/versions/v9.3.0 \
+    && nvm uninstall $NODE_VERSION \
     && nvm install $NODE_VERSION \
     && nvm alias default $NODE_VERSION \
     && nvm use default
@@ -41,11 +41,7 @@ RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.20.0/install.sh | b
 ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
 ENV PATH      $NVM_DIR/v$NODE_VERSION/bin:$PATH
 
-RUN node -v && \
-    npm version
-
-RUN apt install build-essential -y --fix-missing && \
-    yes | npm install -g @angular/cli && \
+RUN yes | npm install -g @angular/cli && \
     ng version && \
     apt-get upgrade git -y --fix-missing && \
     git --version && \
@@ -56,4 +52,3 @@ RUN apt install build-essential -y --fix-missing && \
     apt install openjdk-8-jre-headless -y --fix-missing 
 
 RUN npm install -g firebase-tools
-
