@@ -26,4 +26,29 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Further help
 
+## Firebase Ports
+
+firebase login
+firebase emulators:start
+
+┌────────────────┬──────────────────────────────────┬─────────────────────────────────┐
+│ Emulator       │ Host:Port                        │ View in Emulator UI             │
+├────────────────┼──────────────────────────────────┼─────────────────────────────────┤
+│ Authentication │ localhost:9099                   │ http://localhost:9090/auth      │
+├────────────────┼──────────────────────────────────┼─────────────────────────────────┤
+│ Functions      │ Failed to initialize (see above) │                                 │
+├────────────────┼──────────────────────────────────┼─────────────────────────────────┤
+│ Firestore      │ localhost:8080                   │ http://localhost:9090/firestore │
+├────────────────┼──────────────────────────────────┼─────────────────────────────────┤
+│ Database       │ localhost:9000                   │ http://localhost:9090/database  │
+├────────────────┼──────────────────────────────────┼─────────────────────────────────┤
+│ Hosting        │ 0.0.0.0:5000                     │ n/a                             │
+├────────────────┼──────────────────────────────────┼─────────────────────────────────┤
+│ Pub/Sub        │ localhost:8085                   │ n/a                             │
+└────────────────┴──────────────────────────────────┴─────────────────────────────────┘
+  Other reserved ports: 4400, 4500
+
+
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+(c). Copyright, Ray C Horn, All Rights Reserved.
