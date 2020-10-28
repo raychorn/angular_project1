@@ -11,8 +11,9 @@ LABEL promoted="true"
 
 RUN apt-get update -y && \
     apt-get install curl -y --fix-missing && \
-    curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
-    apt-get install -y nodejs --fix-missing && \
+    apt-get install build-essential libssl-dev -y --fix-missing && \
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash && \
+    nvm install v9.3.0 && \
     node -v && \
     npm version && \
     apt install build-essential -y --fix-missing && \

@@ -1,0 +1,36 @@
+{
+    "name": "firebase-functions",
+    "version": "3.11.0",
+    "description": "Firebase SDK for Cloud Functions",
+    "keywords": [
+        "firebase",
+        "functions",
+        "google",
+        "cloud"
+    ],
+    "homepage": "",
+    "bugs": {
+        "url": ""
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "license": "MIT",
+    "author": "Ray C Horn",
+    "files": [
+        "lib"
+    ],
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "publishConfig": {},
+    "scripts": {},
+    "dependencies": {},
+    "devDependencies": {},
+    "peerDependencies": {
+        "firebase-admin": "^8.0.0 || ^9.3.0 || ^14.0.0"
+    },
+    "engines": {
+        "node": ">=9.3.0"
+    }
+}
