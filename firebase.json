@@ -29,17 +29,18 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "public": "docs",
     "rewrites": [
       {
         "source": "**",
         "destination": "/index.html"
       }
+    ],
+    "site": "sample-site1",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
     ]
   },
   "storage": {

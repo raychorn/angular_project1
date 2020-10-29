@@ -53,7 +53,8 @@ firebase emulators:start
 
 npm run-script build
 
-firebase hosting:channel:deploy staging
+firebase deploy --only hosting:sample-site1
+https://sample-site1.web.app/
 
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
