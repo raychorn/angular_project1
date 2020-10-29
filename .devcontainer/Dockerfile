@@ -27,19 +27,7 @@ RUN apt-get update && apt-get install -y -q --no-install-recommends \
     wget \
     && rm -rf /var/lib/apt/lists/*
 
-ENV NVM_DIR /root/.nvm
-ENV NODE_VERSION 9.3.0
-
-RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.20.0/install.sh | bash \
-    && . /root/.bashrc \
-    && mkdir -p $NVM_DIR/versions/v9.3.0 \
-    && nvm uninstall $NODE_VERSION \
-    && nvm install $NODE_VERSION \
-    && nvm alias default $NODE_VERSION \
-    && nvm use default
-
-ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
-ENV PATH      $NVM_DIR/v$NODE_VERSION/bin:$PATH
+RUN apt-get install nodejs -y -q --no-install-recommends --fix-missing
 
 RUN yes | npm install -g @angular/cli && \
     ng version && \
@@ -51,4 +39,6 @@ RUN yes | npm install -g @angular/cli && \
     apt install openjdk-11-jre-headless -y --fix-missing && \
     apt install openjdk-8-jre-headless -y --fix-missing 
 
-RUN npm install -g firebase-tools
+RUN npm install -g firebase-tools && \
+    npm install --save firebase-admin
+
