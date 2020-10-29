@@ -22,7 +22,7 @@ export class CrudComponent implements OnInit {
     this.crudService.read_Students().subscribe(data => {
 
       this.students = data.map(e => {
-        console.log('e.payload.doc -> ' + e.payload.doc.id + ', ' + JSON.stringify(e.payload.doc.data()));
+        //console.log('e.payload.doc -> ' + e.payload.doc.id + ', ' + JSON.stringify(e.payload.doc.data()));
         return {
           id: e.payload.doc.id,
           isEdit: false,

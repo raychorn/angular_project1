@@ -53,7 +53,7 @@ firebase emulators:start
 
 ## Build help
 
-npm run-script build
+ng build --prod
 
 firebase deploy --only hosting:sample-site1
 https://sample-site1.web.app/
