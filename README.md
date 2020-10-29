@@ -49,6 +49,12 @@ firebase emulators:start
 └────────────────┴──────────────────────────────────┴─────────────────────────────────┘
   Other reserved ports: 4400, 4500
 
+## Build help
+
+npm run-script build
+
+firebase hosting:channel:deploy staging
+
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
