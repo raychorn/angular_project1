@@ -28,6 +28,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Firebase Ports
 
+npm install --save firebase-admin    -- Install in your functions directory.
 firebase login
 firebase emulators:start
 
